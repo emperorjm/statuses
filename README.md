@@ -5,7 +5,7 @@ This module tries to create a generic list of statuses that applications might u
 
 ### installation
 
-go get github.com/emperorjm/statuses
+    go get github.com/emperorjm/statuses
 
 
 ### usage
