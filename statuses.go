@@ -1,5 +1,9 @@
 package statuses
 
+import (
+	"errors"
+)
+
 // Status - all info about status
 type Status struct {
 	Name string `json:"name"`
@@ -35,11 +39,16 @@ func TotalStatuses(code string) int {
 }
 
 // StatusInfo - return all info about status as Status struct
-func StatusInfo(code string) *Status {
+func StatusInfo(code string) (*Status, error) {
+	// Check if the map key exists and if not returns an error with a message.
+	if _, ok := statuses[code]; ok {
+		return nil, errors.New("Invalid code submitted")
+	}
+
 	return &Status{
 		Name: statuses[code],
 		Code: code,
-	}
+	}, nil
 }
 
 // AllStatuses - returns all the avialble statuses
