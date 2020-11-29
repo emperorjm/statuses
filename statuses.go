@@ -41,12 +41,13 @@ func TotalStatuses() int {
 // StatusInfo - return all info about status as Status struct
 func StatusInfo(code string) (*Status, error) {
 	// Check if the map key exists and if not returns an error with a message.
-	if _, ok := statuses[code]; !ok {
+	name, ok := statuses[code]
+	if !ok {
 		return nil, errors.New("Invalid code submitted")
 	}
 
 	return &Status{
-		Name: statuses[code],
+		Name: name,
 		Code: code,
 	}, nil
 }
