@@ -11,5 +11,5 @@ This module tries to create a generic list of statuses that applications might u
 ### usage
 
 ```go
-import "github.com/biter777/countries"
+import "github.com/emperorjm/statuses"
 ```
