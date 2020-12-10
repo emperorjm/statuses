@@ -31,6 +31,7 @@ var statuses = map[string]string{
 	"refund":            "Refund",
 	"rejected":          "Rejected",
 	"success":           "Success",
+	"verified":          "Verified",
 }
 
 // TotalStatuses - returns the total number of statuses
