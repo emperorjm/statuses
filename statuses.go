@@ -32,6 +32,8 @@ var statuses = map[string]string{
 	"rejected":          "Rejected",
 	"success":           "Success",
 	"verified":          "Verified",
+	"factored":          "Factored",
+	"failed":            "Failed",
 }
 
 // TotalStatuses - returns the total number of statuses
